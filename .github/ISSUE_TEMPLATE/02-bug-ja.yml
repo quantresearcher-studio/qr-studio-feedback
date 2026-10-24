@@ -1,0 +1,90 @@
+name: "不具合報告 — 日本語"
+description: "QR Studio の不具合を報告します。"
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        この報告と添付ファイルは公開されます。API キー、パスワード、トークン、口座を特定できる情報、個人情報、非公開の取引記録を削除してください。使い方の質問は Discussions をご利用ください。
+  - type: input
+    id: version
+    attributes:
+      label: "QR Studio のバージョン／ビルド番号"
+      placeholder: "ご利用のバージョンやマイルストーン番号を入力してください。"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: "Windows のバージョンと関連する利用環境"
+      placeholder: "Windows のバージョン。必要に応じて画面の拡大率やハードウェア情報。"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: "問題が発生した機能"
+      options:
+        - "チャート／インジケーター"
+        - "DOM ラダー"
+        - "ストラテジーエディター／API／パラメーター"
+        - "バックテスト"
+        - "市場データ／履歴データのダウンロード"
+        - "証券会社への接続／注文／ポジション／Journal"
+        - "インストール／起動"
+        - "ドキュメント"
+        - "その他／不明"
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: "利用モード"
+      options:
+        - "バックテスト"
+        - "Paper／シミュレーション"
+        - "Live"
+        - "オフライン／該当なし"
+        - "不明"
+    validations:
+      required: true
+  - type: input
+    id: integrations
+    attributes:
+      label: "関連する証券会社、データフィード、銘柄、時間足"
+      description: "サービス名を記載し、口座番号や認証情報は含めないでください。"
+  - type: textarea
+    id: steps
+    attributes:
+      label: "再現手順"
+      placeholder: "1. ... を開く\n2. ... を選択する\n3. ... が発生する"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "期待していた動作"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: "実際の動作"
+      description: "エラーメッセージと発生頻度も記載してください。時刻に関する問題ではタイムゾーンも記載してください。"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "機密情報を除いたログ、画像、最小限の再現例（任意）"
+      description: "添付前に内容を確認してください。ワークスペース全体や口座情報のエクスポートではなく、必要な部分だけを共有してください。"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "投稿前の確認"
+      options:
+        - label: "既存の Issues に同じ問題がないか検索しました。"
+          required: true
+        - label: "この報告と添付ファイルから機密情報を削除しました。"
+          required: true

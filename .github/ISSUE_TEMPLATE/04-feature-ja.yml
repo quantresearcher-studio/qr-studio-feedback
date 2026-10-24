@@ -1,0 +1,41 @@
+name: "機能要望 — 日本語"
+description: "QR Studio の改善案や追加機能を提案します。"
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        1 件の投稿につき 1 つの改善案を記載してください。この投稿は公開されます。認証情報や非公開の口座情報は含めないでください。アイデアの相談は Discussions をご利用ください。要望の受付は、実装や提供時期の確約ではありません。
+  - type: textarea
+    id: problem
+    attributes:
+      label: "解決したい課題"
+      description: "現在の操作や作業で困っていること、誰に役立つ改善かを説明してください。"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "希望する動作"
+      description: "QR Studio にどのような動作をしてほしいか、具体例を添えて説明してください。"
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "現在の回避策や代替案（任意）"
+  - type: textarea
+    id: context
+    attributes:
+      label: "補足情報（任意）"
+      description: "関連する機能、バージョン、証券会社・データフィード、市場、Paper／Live／バックテストの別、機密情報を除いた画像など。"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "投稿前の確認"
+      options:
+        - label: "既存の Issues と Discussions に同じ要望がないか検索しました。"
+          required: true
+        - label: "この要望と添付ファイルから機密情報を削除しました。"
+          required: true

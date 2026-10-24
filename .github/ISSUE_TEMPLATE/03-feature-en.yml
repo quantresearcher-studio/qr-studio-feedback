@@ -1,0 +1,41 @@
+name: "Feature request — English"
+description: "Suggest an improvement to QR Studio."
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe one improvement per request. This post is public; exclude credentials and private account information. For exploratory questions, use Discussions. Requests do not guarantee implementation or a delivery date.
+  - type: textarea
+    id: problem
+    attributes:
+      label: "What problem would this solve?"
+      description: "Describe the workflow and who would benefit."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposed behavior"
+      description: "Describe what you would like QR Studio to do. A small example is helpful."
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Current workaround or alternatives (optional)"
+  - type: textarea
+    id: context
+    attributes:
+      label: "Relevant context (optional)"
+      description: "Affected feature, version, broker/feed, market, Paper/Live/backtest mode, or sanitized screenshots."
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "Before submitting"
+      options:
+        - label: "I searched existing Issues and Discussions for a similar request."
+          required: true
+        - label: "I removed sensitive information from this request and its attachments."
+          required: true

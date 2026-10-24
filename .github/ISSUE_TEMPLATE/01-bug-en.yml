@@ -1,0 +1,90 @@
+name: "Bug report — English"
+description: "Report a reproducible problem in QR Studio."
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This report and its attachments will be public. Remove API keys, passwords, tokens, account identifiers, personal information, and private trading records. Use Discussions for general questions.
+  - type: input
+    id: version
+    attributes:
+      label: "QR Studio version / build"
+      placeholder: "Enter the version or milestone shown in your installation."
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: "Windows version and relevant environment"
+      placeholder: "Windows version; display scaling or hardware details if relevant."
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Affected area"
+      options:
+        - "Chart / indicators"
+        - "DOM ladder"
+        - "Strategy editor / API / parameters"
+        - "Backtesting"
+        - "Market data / historical downloads"
+        - "Broker connection / orders / positions / Journal"
+        - "Installation / startup"
+        - "Documentation"
+        - "Other / unsure"
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: "Mode"
+      options:
+        - "Backtest"
+        - "Paper / simulation"
+        - "Live"
+        - "Offline / not applicable"
+        - "Unsure"
+    validations:
+      required: true
+  - type: input
+    id: integrations
+    attributes:
+      label: "Broker, data feed, instrument and timeframe, if relevant"
+      description: "Name the services, not account numbers or credentials."
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to reproduce"
+      placeholder: "1. Open ...\n2. Select ...\n3. Observe ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected behavior"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: "Actual behavior"
+      description: "Include the error text and how often the issue occurs. For timestamp problems, state the time zone."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Sanitized logs, screenshots or minimal example (optional)"
+      description: "Review attachments before uploading. Share only the relevant excerpt, not an entire workspace or account export."
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "Before submitting"
+      options:
+        - label: "I searched existing Issues for the same problem."
+          required: true
+        - label: "I removed sensitive information from this report and its attachments."
+          required: true
