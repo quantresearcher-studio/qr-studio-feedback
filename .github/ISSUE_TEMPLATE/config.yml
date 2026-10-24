@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Questions and ideas / 質問・相談"
+    url: "https://github.com/quantresearcher-studio/qr-studio-feedback/discussions"
+    about: "Ask questions and discuss ideas in English or Japanese. 日本語・英語で質問やアイデアを相談できます。"
+  - name: "Documentation / ドキュメント"
+    url: "https://quant-research.org/docs"
+    about: "Read the guides; Japanese documentation is available from the language selector. 言語切り替えで日本語のガイドも確認できます。"
