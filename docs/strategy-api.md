@@ -2,7 +2,7 @@
 
 [日本語](strategy-api.ja.md) · [Ubuntu CLI walkthrough](ubuntu-cli.md) · [Full API guide](https://quant-research.org/docs/strategy-api)
 
-These standalone C# examples use QR Studio's strategy API. Compile **one file at a time** in the matching Studio package. The repository publishes sample strategies and usage documentation; the engine and application implementation remain private. Examples are educational and do not establish profitability or live execution behaviour.
+These standalone C# examples use QR Studio's strategy API. Compile **one file at a time** in the matching Studio package. Examples are educational and do not establish profitability or live execution behaviour.
 
 Compatibility: **M136 / 0.8.0-rc.6** API, reviewed October 2026. The installer candidate remains in release testing. Some examples may compile on earlier builds, but newer symbol/session APIs require a compatible package. [Bundled sample manifest](../examples/strategies/manifest.json) records the source hashes and exact strategy type names for the 17 library examples.
 
