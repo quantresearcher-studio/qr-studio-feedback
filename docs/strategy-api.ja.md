@@ -2,7 +2,7 @@
 
 [English](strategy-api.md) · [Ubuntu CLI 手順](ubuntu-cli.ja.md) · [API ガイド](https://quant-research.org/ja/docs/strategy-api)
 
-QR Studio のストラテジー API を使う、独立した C# サンプルです。対応する Studio で **1 ファイルずつ**コンパイルしてください。サンプルと利用手順を公開し、エンジン・アプリ本体の実装は非公開のままです。教材用であり、利益や実口座での約定を保証しません。
+QR Studio のストラテジー API を使う、独立した C# サンプルです。対応する Studio で **1 ファイルずつ**コンパイルしてください。教材用であり、利益や実口座での約定を保証しません。
 
 対象は **M136 / 0.8.0-rc.6** API（2026 年 10 月確認）です。インストーラー候補版は引き続きリリース試験中です。旧版で動く例もありますが、新しい Symbol／セッション API には対応パッケージが必要です。[manifest.json](../examples/strategies/manifest.json) に、ライブラリの 17 サンプルの型名とソースハッシュを記録しています。
 
