@@ -5,6 +5,15 @@
 Welcome to the public feedback hub for **QuantResearcher Studio (QR Studio)**.
 Use this space to report bugs, suggest improvements, ask questions, and share strategy-development tips. English and Japanese are both welcome; you do not need to translate your post.
 
+## Strategy samples and Ubuntu commands
+
+- [Strategy API samples and usage](docs/strategy-api.md): 17 bundled strategies plus symbol-metadata and API-syntax examples.
+- [Ubuntu CLI walkthrough](docs/ubuntu-cli.md): data import, compilation, backtest, grid/genetic optimization, research folds and result inspection.
+- [Runnable synthetic-data examples](examples/ubuntu/): try the workflows with your compatible QR Studio CLI package.
+- [日本語のサンプルガイド](docs/strategy-api.ja.md) / [Ubuntu CLI 日本語手順](docs/ubuntu-cli.ja.md)
+
+The guides identify their tested package version. Documentation updates do not announce a new installer release.
+
 ## Choose where to post
 
 - **Bug reports:** Open an Issue and select **Bug report — English** or **不具合報告 — 日本語**.
@@ -21,6 +30,6 @@ For matters that need private handling, use the [contact page](https://quant-res
 
 ## Repository scope
 
-This repository contains community documentation and feedback templates. QR Studio's application source code, build artifacts, account settings, and private development history are maintained separately and are not published here.
+This repository contains community documentation, public strategy API examples, synthetic CLI tutorials and feedback templates. QR Studio's application and engine implementation, build artifacts, account settings, and private development history are maintained separately and are not published here.
 
 Feature requests are proposals, not delivery commitments. Maintainers can use Issues to explain decisions, track progress, and identify the release containing a fix.
