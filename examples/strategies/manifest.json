@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "strategyApiVersion": "1",
+  "count": 17,
+  "strategies": [
+    {
+      "id": "sample-round-trip",
+      "name": "Round trip",
+      "kind": "Original sample",
+      "description": "Original demonstration: submit an entry, then an exit on the next eligible observation.",
+      "path": "DemoRoundTrip.cs",
+      "logicalName": "DemoRoundTrip.cs",
+      "strategyType": "StudioExamples.RoundTrip",
+      "sha256": "c1073888bacf4eece8f15cfa37c74596c6cc10696b0e4b6a4357dabe2193ebf2"
+    },
+    {
+      "id": "sample-buy-hold",
+      "name": "Buy and hold",
+      "kind": "Original sample",
+      "description": "Original example: submit one market entry at start; the position remains open until the run ends.",
+      "path": "BuyAndHold.cs",
+      "logicalName": "BuyAndHold.cs",
+      "strategyType": "StudioExamples.BuyAndHold",
+      "sha256": "1017ad47ab62abe883fe9c41db354e5e35a6ad128fc7ff66f36e4964bc401d03"
+    },
+    {
+      "id": "sample-observer",
+      "name": "Market event observer",
+      "kind": "Original sample",
+      "description": "Original read-only template: count matching market events without submitting orders.",
+      "path": "EventObserver.cs",
+      "logicalName": "EventObserver.cs",
+      "strategyType": "StudioExamples.EventObserver",
+      "sha256": "6f8c5471b5b611fb908781c35fa0a7be0f4bf016263fb73065a73ebeb4c0877f"
+    },
+    {
+      "id": "sample-ma-crossover",
+      "name": "Moving average crossover",
+      "kind": "Original sample",
+      "description": "Fast/slow SMA crossover with separate timeframe-minute parameters. Register once in OnStart; completed candles update automatically; prior selected replay data or compatible live history warms the averages. Supports bars, bid quotes or trades. Any minute interval from 1 to 1440 is supported. Averages are compared as entered; equal settings stay flat.",
+      "path": "MovingAverageCrossover.cs",
+      "logicalName": "MovingAverageCrossover.cs",
+      "strategyType": "StudioExamples.MovingAverageCrossover",
+      "sha256": "d8c5258cbf1e6e751afc109425ba1e8a6c4c190b1f2b5079fff3bd759acce71e"
+    },
+    {
+      "id": "sample-mean-reversion",
+      "name": "Mean reversion",
+      "kind": "Original sample",
+      "description": "Prior-window z-score using automatically updated timeframe bands. TimeframeMinutes selects completed candles; Previous excludes the current candle. Earlier selected data or compatible live history warms prices. Zero variance does not trade; ExitZ must be smaller than EntryZ.",
+      "path": "MeanReversion.cs",
+      "logicalName": "MeanReversion.cs",
+      "strategyType": "StudioExamples.MeanReversion",
+      "sha256": "32650ec48177b28f7698b5823476f33080fba9819a5d4d7fcf2d36c2290ce2f9"
+    },
+    {
+      "id": "sample-channel-breakout",
+      "name": "Channel breakout",
+      "kind": "Original sample",
+      "description": "Breakout against prior candle highs/lows. TimeframeMinutes selects the candle frequency; a bounded bar window requests compatible live history. The newest candle is excluded from both channels. Supports bars, bid quotes or trades.",
+      "path": "ChannelBreakout.cs",
+      "logicalName": "ChannelBreakout.cs",
+      "strategyType": "StudioExamples.ChannelBreakout",
+      "sha256": "77809d22a5a5d358520af80f04e31d6ea161e8f830de1ccbd2b12fb41da0dbbe"
+    },
+    {
+      "id": "sample-trade-momentum",
+      "name": "Trade momentum",
+      "kind": "Original sample",
+      "description": "Momentum over Lookback completed trade-price candles, with configurable TimeframeMinutes and compatible live history warm-up. Trade execution uses actual trades; pending remainders prevent duplicate exposure.",
+      "path": "TradeMomentum.cs",
+      "logicalName": "TradeMomentum.cs",
+      "strategyType": "StudioExamples.TradeMomentum",
+      "sha256": "f6841c8fa8e0198d9142ae662795b88598afd086a41705648d2094ecb3852e57"
+    },
+    {
+      "id": "sample-quote-momentum",
+      "name": "Quote momentum",
+      "kind": "Original sample",
+      "description": "Momentum over completed bid-price candles, with configurable TimeframeMinutes and compatible bid-history warm-up. Quote execution uses actual bid/ask. At each candle close, zero sizes or excessive current spread flatten the target; candle history is retained.",
+      "path": "QuoteMomentum.cs",
+      "logicalName": "QuoteMomentum.cs",
+      "strategyType": "StudioExamples.QuoteMomentum",
+      "sha256": "b44f0d0c165ed8584e04034e9855bf93381cebc77e1243ed924fc68ba879608a"
+    },
+    {
+      "id": "sample-multi-symbol-trend",
+      "name": "Multi-symbol trend",
+      "kind": "Original sample",
+      "description": "Independent timeframe SMAs for Symbol and OtherSymbol. TimeframeMinutes selects completed candles and each symbol requests its own compatible history. Supports explicitly selected bars, quotes or trades. No cross-symbol history or invented observations.",
+      "path": "MultiSymbolTrend.cs",
+      "logicalName": "MultiSymbolTrend.cs",
+      "strategyType": "StudioExamples.MultiSymbolTrend",
+      "sha256": "6296d127e7dc19268a3289ba4e9967c585939aff6e350db99f8f458c0561263a"
+    },
+    {
+      "id": "sample-multi-timezone-session",
+      "name": "Multi time zones UTC session trend",
+      "kind": "Original sample",
+      "description": "Trade-price timeframe SMA gated by Tokyo 09:00-15:30 or New York 09:30-16:00 local weekdays (DST respected). TimeframeMinutes is configurable; compatible history warms prices across sessions. Checks the session and exits at the next completed candle decision. Not a holiday calendar.",
+      "path": "MultiTimeZoneSessionTrend.cs",
+      "logicalName": "MultiTimeZoneSessionTrend.cs",
+      "strategyType": "StudioExamples.MultiTimeZoneSessionTrend",
+      "sha256": "7ce0f4da52a83b1b84580c06988e914b0b6155d9b0056cd84655881688f643b4"
+    },
+    {
+      "id": "sample-quote-trade-confirmation",
+      "name": "Quote \u002B trades confirmation",
+      "kind": "Original sample",
+      "description": "Completed trade-candle momentum with configurable TimeframeMinutes and compatible history warm-up. Entry also requires an actual trade at/above a fresh observed ask; stale/invalid quotes flatten the target at the next completed candle decision. Select both quote and trade streams; no historical quote confirmation is invented.",
+      "path": "QuoteTradeConfirmation.cs",
+      "logicalName": "QuoteTradeConfirmation.cs",
+      "strategyType": "StudioExamples.QuoteTradeConfirmation",
+      "sha256": "ed302149ea500f5d65952d7060d628fb9e136eb935fed005679a520e668d4d1c"
+    },
+    {
+      "id": "sample-passive-ladder",
+      "name": "Passive bid / ask ladder",
+      "kind": "Original sample",
+      "description": "Two-sided limit ladder based on observed quotes. Requires Quote execution; TickSize 0 reads Symbol.TickSize. Optional local trading windows use Symbol.TimeZone; cancel owned quotes during breaks and resume on fresh in-window quotes after confirmation. Existing positions remain open. Filled inventory occupies inner levels. Up to 5 levels per side, bounded signed inventory, conservative cancel/acknowledge/reseed refreshes. Can hold short positions; configure cash, margin and commissions. L1 quotes do not establish exchange queue position: replay uses the selected fill/liquidity model, never invented depth.",
+      "path": "PassiveBidAskLadder.cs",
+      "logicalName": "PassiveBidAskLadder.cs",
+      "strategyType": "StudioExamples.PassiveBidAskLadder",
+      "sha256": "040283c35e1e2a9cb9f9daa82dff2ef1df04102aa337a51086151301b1f219da"
+    },
+    {
+      "id": "sample-news-filter-ma",
+      "name": "News-filter moving average",
+      "kind": "Original sample",
+      "description": "Timeframe SMA crossover gated by arrived NewsAPI.ai sentiment. TimeframeMinutes configures both averages; compatible live history warms prices only. Same-symbol eligible news must still arrive. Snapshot timing by default; no future news.",
+      "path": "NewsFilteredMovingAverage.cs",
+      "logicalName": "NewsFilteredMovingAverage.cs",
+      "strategyType": "StudioExamples.NewsFilteredMovingAverage",
+      "sha256": "054065f729340a35e31a41670065e4c8256f06c564e3c3413b71ffda5fe739c0"
+    },
+    {
+      "id": "sample-jquants-statement-forecast",
+      "name": "J-Quants statements \u002B price forecast",
+      "kind": "Original sample",
+      "description": "Original one-next-bar rule: observed price trend \u002B same-disclosure operating margin. Needs exact FS labels, statement information \u002B prices; not trained ML.",
+      "path": "JQuantsStatementForecast.cs",
+      "logicalName": "JQuantsStatementForecast.cs",
+      "strategyType": "StudioExamples.JQuantsStatementForecast",
+      "sha256": "ec4035eafa407760ec637718ff779671eed6dc93db490480c215c6ecd8dd4d9e"
+    },
+    {
+      "id": "sample-jquants-fundamental-forecast",
+      "name": "J-Quants fundamentals \u002B price forecast",
+      "kind": "Original sample",
+      "description": "Original one-next-bar rule: observed price trend \u002B same-disclosure EPS/BPS feature. Needs summary information \u002B prices; no annualization or trained ML.",
+      "path": "JQuantsFundamentalForecast.cs",
+      "logicalName": "JQuantsFundamentalForecast.cs",
+      "strategyType": "StudioExamples.JQuantsFundamentalForecast",
+      "sha256": "172b3da325d5288e256bbd636349e2642361a1a87d26fdb7209ec318c549a0f4"
+    },
+    {
+      "id": "template-typed-callback-observer",
+      "name": "Typed callback observer",
+      "kind": "Starter template",
+      "description": "Beginner template: observe bar-open, completed-bar, trade and quote callbacks for one symbol. Counts events without placing orders; validate after opening.",
+      "path": "TypedCallbackObserver.cs",
+      "logicalName": "TypedCallbackObserver.cs",
+      "strategyType": "StudioExamples.TypedCallbackObserver",
+      "sha256": "c68b66f74ec0c32bd9e60ebbde5d96d4cf37d3a543950afaeadbd4a7e606b893"
+    },
+    {
+      "id": "template-blank-strategy",
+      "name": "Blank new strategy",
+      "kind": "Starter template",
+      "description": "The editable New strategy scaffold; observes events without placing orders.",
+      "path": "MyStrategy.cs",
+      "logicalName": "MyStrategy.cs",
+      "strategyType": "UserStrategies.MyStrategy",
+      "sha256": "70b955f871d37b1768d78d9a7a3fe4b9df2fcaa772805f40f226399be37c20f8"
+    }
+  ]
+}
